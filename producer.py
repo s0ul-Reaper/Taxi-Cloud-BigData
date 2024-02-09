@@ -17,7 +17,7 @@ CONNECTION_STRING = os.getenv('CONNECTION_STRING')
 
 spark = SparkSession.builder.appName("StreamTaxi").getOrCreate()
 
-df = spark.read.option('header', 'true').csv('./data/test.csv')
+df = spark.read.option('header', 'true').csv('./data/train.csv')
 df = df.withColumn("row_id", monotonically_increasing_id())
 
 async def run():
