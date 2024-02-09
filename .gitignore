@@ -1,0 +1,11 @@
+data/
+*.zip
+todo
+*.rtf
+venv/
+.python_packages
+__pycache__
+.env
+*.json
+*.drawio
+.funcignore
